@@ -6,6 +6,8 @@ Objectives:
 
 This simple app takes in three sides as a string, and returns whether or not it constitutes a triangle. This is achieved using the principle of the Triangle Inequality. If it passes the Triangle Inequality test, it will then proceed to determine what kind of triangle it is using conditional branching. Furthermore, it will check to see if there are no non-zero, non-negative sides inputted. Negative sides should fail the Triangle Inequality Test, but this is not necessarily the case with zero inputs. Thus, added functionality to ensure a number greater than zero is inputted.
 
+Furthermore, there must be three sides inputted, otherwise it will prompt an error message. This was done by making a conditional and evaluating an isNan() statement to each, for when the parseFloat() returns a NaN for the empty string.
+
 Via conditional branching, it will:
 
 1)Check to see if has two sides equal to each other.
