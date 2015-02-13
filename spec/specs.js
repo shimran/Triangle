@@ -22,6 +22,12 @@ describe('Triangle', function(){
     expect(Triangle("5,0,5")).to.equal("All sides must have a value greater than zero")
   });
 
+  it('Will check to see if all three sides are inputted', function(){
+    expect(Triangle(",0,5")).to.equal("You must input three sides!")
+    expect(Triangle("5,,5")).to.equal("You must input three sides!")
+    expect(Triangle("5,0,")).to.equal("You must input three sides!")
+  });
+
   it('Will accept float types for all conditions', function(){
     expect(Triangle("0,1.5,0")).to.equal("These are not valid triangle dimensions")
     expect(Triangle("3.25,4.4,5.5")).to.equal("You have a Scalene Triangle");

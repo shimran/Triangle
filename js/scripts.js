@@ -8,9 +8,13 @@ var Triangle = (function(sides) {
     if (sideOne + sideTwo < sideThree || sideOne + sideThree < sideTwo || sideTwo + sideThree < sideOne){
       return "These are not valid triangle dimensions"
     }
+    if (isNaN(sideOne) || isNaN(sideTwo) || isNaN(sideThree)){
+      return "You must input three sides!"
+    }
     if (sideOne <= 0 || sideTwo <= 0 || sideThree <= 0){
       return "All sides must have a value greater than zero"
     }
+
     if (sideOne==sideTwo && sideOne!==sideThree || sideOne===sideThree && sideOne!==sideTwo || sideTwo=== sideThree && sideTwo!==sideOne){
       return "You have an Isosceles Triangle"
     }else if (sideOne === sideTwo && sideTwo === sideThree){
