@@ -1,10 +1,10 @@
-TRIANGULATOR
+TRIANGULATE!
 
 TRIANGLE APP by Shimran George
 
 Objectives:
 
-This simple app takes in three sides as a string, and returns whether or not it constitutes a triangle. This is achieved using the principle of the Triangle Inequality. If it passes the Triangle Inequality test, it will then proceed to determine what kind of triangle it is using conditional branching.
+This simple app takes in three sides as a string, and returns whether or not it constitutes a triangle. This is achieved using the principle of the Triangle Inequality. If it passes the Triangle Inequality test, it will then proceed to determine what kind of triangle it is using conditional branching. Furthermore, it will check to see if there are no non-zero, non-negative sides inputted. Negative sides should fail the Triangle Inequality Test, but this is not necessarily the case with zero inputs. Thus, added functionality to ensure a number greater than zero is inputted.
 
 Via conditional branching, it will:
 
@@ -12,7 +12,7 @@ Via conditional branching, it will:
 2)->Then check to see if all sides are equal to each other.
 3)--> If all sides equal, go back to two and print out Equilateral Triangle.
 4) If only two sides are equal, go back to one and print out Isosceles Triangle.
-5) If it meets neither condition (1) or condition (2), the program determines it to be a scalene triangle. 
+5) If it meets neither condition (1) or condition (2), the program determines it to be a scalene triangle.
 
 Future Functionality:
 
