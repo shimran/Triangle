@@ -7,7 +7,11 @@ var Triangle = (function(sides) {
 
     if (sideOne + sideTwo < sideThree || sideOne + sideThree < sideTwo || sideTwo + sideThree < sideOne){
       return "These are not valid triangle dimensions"
-    }else if (sideOne==sideTwo && sideOne!==sideThree || sideOne===sideThree && sideOne!==sideTwo || sideTwo=== sideThree && sideTwo!==sideOne){
+    }
+    if (sideOne <= 0 || sideTwo <= 0 || sideThree <= 0){
+      return "All sides must have a value greater than zero"
+    }
+    if (sideOne==sideTwo && sideOne!==sideThree || sideOne===sideThree && sideOne!==sideTwo || sideTwo=== sideThree && sideTwo!==sideOne){
       return "You have an Isosceles Triangle"
     }else if (sideOne === sideTwo && sideTwo === sideThree){
       return "You have an Equilateral Triangle"
@@ -18,11 +22,11 @@ var Triangle = (function(sides) {
 });
 
 
-// $(document).ready(function() {
-//   $("form#input").submit(function(event) {
-//     var result = wordOrder($("input#sentence").val());
-//     $(".result").text(result);
-//     $("#result").show();
-//     event.preventDefault();
-//   });
-// });
+$(document).ready(function() {
+  $("form#input").submit(function(event) {
+    var result = Triangle($("input#sides").val());
+    $(".result").text(result);
+    $("#result").show();
+    event.preventDefault();
+  });
+});
